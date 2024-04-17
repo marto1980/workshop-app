@@ -1,5 +1,5 @@
-import { ParentComponent } from "@/experiment";
-import { CorrectParent } from "@/experiment/correctParent";
+import { ParentComponent } from "@/app/experiment";
+import { CorrectParent } from "@/app/experiment/correctParent";
 import Image from "next/image";
 
 export default function Home() {

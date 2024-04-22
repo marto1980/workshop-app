@@ -1,12 +1,19 @@
 'use client'
 
+import useSWR from 'swr'
+
+import { Loading } from './loading';
+import { Error } from './error';
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 const ExampleComponent = () => {
-    const userData = {
-        id: 'a-fancy-user-id',
-        name: 'John Smith',
-        address: 'Lorem Ipsum 12'
-    } // fetch userData 
-    const { name, address } = userData
+    const { data, error, isLoading } = useSWR('http://localhost:3001/user-data', fetcher)
+    if (error) return <Error />
+    if (isLoading) return <Loading />
+    const { name, address } = data
+
+
     return <div>
         <p>User name: {name}</p>
         <p>User address: {address}</p>

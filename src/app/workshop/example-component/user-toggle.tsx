@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { Error } from './error';
 import { Loading } from "./loading";
 import { ToggleButton } from "./toggle-button";
+import React from "react";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 

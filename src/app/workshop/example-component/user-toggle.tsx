@@ -5,7 +5,7 @@ import { Error } from './error';
 import { Loading } from "./loading";
 import { ToggleButton } from "./toggle-button";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 interface UserData {
     id: string
@@ -24,7 +24,9 @@ const User = ({ data }: { data: UserData }) => {
 
 
 const UserToggle = () => {
-    const { data, error, isLoading } = useSWR('http://localhost:3001/user-data', fetcher)
+    const swrFetched = useSWR('http://localhost:3001/user-data', fetcher)
+    const { data, error, isLoading } = swrFetched
+
     const [fakeIsLoading, setFakeIsLoading] = useState(false)
 
     if (error) return <Error />

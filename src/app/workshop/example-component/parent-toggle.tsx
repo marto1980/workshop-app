@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { CorrectParent } from "@/app/experiment/correctParent";
+import React, { useState } from "react";
 
 import { ToggleButton } from "./toggle-button";
-import { CorrectParent } from "@/app/experiment/correctParent";
 
 const ParentToggle = () => {
     const [showParent, setShowParent] = useState(true)
@@ -13,4 +13,4 @@ const ParentToggle = () => {
     </>
 }
 
-export { ParentToggle }
+export { ParentToggle };

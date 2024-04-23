@@ -4,4 +4,8 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   verbose: true,
+  testEnvironmentOptions: {
+    customExportConditions: [''],
+  },
+  setupFiles: ['./jest.polyfills.js'],
 };

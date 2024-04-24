@@ -8,4 +8,9 @@ module.exports = {
     customExportConditions: [''],
   },
   setupFiles: ['./jest.polyfills.js'],
+    globals: {
+      'ts-jest': {
+        tsConfig: 'tsconfig.test.json'
+      }
+    }
 };

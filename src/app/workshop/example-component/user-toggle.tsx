@@ -39,7 +39,7 @@ const UserToggle = () => {
     return <>
         {showLoading ? <Loading /> : <User data={data} />}
         <br />
-        <ToggleButton setter={setFakeIsLoading} text={'Toggle User'} />
+        <ToggleButton setter={setFakeIsLoading} text={'Toggle User State'} />
     </>
 }
 

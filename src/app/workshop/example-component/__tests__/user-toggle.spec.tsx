@@ -1,5 +1,7 @@
 import { render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
+
 
 import { setupFailedUserDataHandlers, setupUserDataHandlers } from '../test-utils/handlers'
 import { server } from '../test-utils/node'
@@ -29,5 +31,20 @@ describe('UserToggle', () => {
 
         expect(userName).toBeInTheDocument
     })
-    
+
+    test('shows loading info on clicking toggle state button', async () => {
+        setupUserDataHandlers()
+        const user = userEvent.setup()
+
+        const { findByText, findByRole } = render(<UserToggle />)
+
+        const userName = await findByText('User name: Test User')
+        expect(userName).toBeInTheDocument
+
+        const button = await findByRole('button')
+        await user.click(button)
+        const loadingText = await findByText('Data is being loaded!')
+        expect(loadingText).toBeInTheDocument
+    })
+
 })

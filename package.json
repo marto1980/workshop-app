@@ -33,6 +33,7 @@
     "@testing-library/jest-dom": "6.4.2",
     "ts-node": "10.9.2",
     "msw": "2.2.14",
-    "undici": "5.28.4"
+    "undici": "5.28.4",
+    "@testing-library/user-event": "14.5.2"
   }
 }

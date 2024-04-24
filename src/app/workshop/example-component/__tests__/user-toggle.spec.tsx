@@ -12,7 +12,7 @@ describe('UserToggle', () => {
     afterEach(() => server.resetHandlers())
     afterAll(() => server.close());
 
-    test("shows error component on fetching error", async () => {
+    test('shows error component on fetching error', async () => {
         setupFailedUserDataHandlers()
         const { findByText } = render(<UserToggle />)
 
@@ -21,7 +21,7 @@ describe('UserToggle', () => {
         expect(errorLoadingData).toBeInTheDocument
     })
 
-    test("shows user data on fetching success", async () => {
+    test('shows user data on fetching success', async () => {
         setupUserDataHandlers()
         const { findByText } = render(<UserToggle />)
 
@@ -29,5 +29,5 @@ describe('UserToggle', () => {
 
         expect(userName).toBeInTheDocument
     })
-
+    
 })

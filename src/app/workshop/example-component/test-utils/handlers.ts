@@ -30,7 +30,6 @@ const failedUserDataHandlers = [
     )
 ]
 
-
 const delayedUserDataHandlers = [
     http.get(
         'http://localhost:3001/user-data',
@@ -39,6 +38,19 @@ const delayedUserDataHandlers = [
         // intercepted request, and decides how to handle it.
         async (info) => {
             await delay(100000)
+            return HttpResponse.json({
+                id: 'test-user-id',
+                name: "Test User",
+                address: "Test address, 123 Narnia"
+            })
+        },
+    ),
+]
+
+const wrongPathUserDataHandlers = [
+    http.get(
+        'http://localhost:3001/a-wrong-path',
+        (info) => {
             return HttpResponse.json({
                 id: 'test-user-id',
                 name: "Test User",
@@ -60,5 +72,10 @@ const setupDelayedUserDataHandlers = () => {
     server.use(...delayedUserDataHandlers)
 }
 
-export { setupDelayedUserDataHandlers, setupFailedUserDataHandlers, setupUserDataHandlers }
+const setupWrongPathUserDataHandlers = () => {
+    server.use(...wrongPathUserDataHandlers)
+}
+
+
+export { setupDelayedUserDataHandlers, setupFailedUserDataHandlers, setupUserDataHandlers, setupWrongPathUserDataHandlers }
 

@@ -1,4 +1,4 @@
-import { CorrectParent } from "@/app/experiment/correctParent";
+import { CorrectParent } from "../../experiment/correctParent";
 import React, { useState } from "react";
 
 import { ToggleButton } from "./toggle-button";

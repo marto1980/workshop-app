@@ -1,16 +1,16 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
   verbose: true,
   testEnvironmentOptions: {
-    customExportConditions: [''],
+    customExportConditions: [""],
   },
-  setupFiles: ['./jest.polyfills.js'],
-    globals: {
-      'ts-jest': {
-        tsConfig: 'tsconfig.test.json'
-      }
-    }
-};
+  setupFiles: ["./jest.polyfills.js"],
+  globals: {
+    "ts-jest": {
+      tsConfig: "tsconfig.test.json",
+    },
+  },
+}

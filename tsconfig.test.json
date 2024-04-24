@@ -1,6 +1,6 @@
 {
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-      "jsx": "react" // Override the JSX setting to react
-    }
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react" // Override the JSX setting to react
   }
+}

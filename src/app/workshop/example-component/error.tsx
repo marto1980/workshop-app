@@ -1,5 +1,3 @@
-import React from "react"
-
 const Error = () => (
   <>
     <h1> Error loading data! </h1>

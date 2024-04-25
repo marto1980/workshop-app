@@ -1,5 +1,4 @@
 import Image from "next/image"
-import React from "react"
 
 import { ParentComponent } from "./experiment"
 import { CorrectParent } from "./experiment/correctParent"

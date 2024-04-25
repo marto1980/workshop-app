@@ -1,28 +1,27 @@
-'use client'
+"use client"
 
-import React from 'react';
-import { useState } from 'react';
+import { useState } from "react"
 
 const ChildComponent = () => {
-  console.log('I re-rendered');
+  console.log("I re-rendered")
 
-  return <p>Child</p>;
+  return <p>Child</p>
 }
 
-const ParentComponent = ({children}:{children: JSX.Element}) => {
-  const [count, setCount] = useState(0);
+const ParentComponent = ({ children }: { children: JSX.Element }) => {
+  const [count, setCount] = useState(0)
   return (
     <div>
       <button onClick={() => setCount(count + 1)}>{count}</button>
       {children}
     </div>
-  );
-};
+  )
+}
 
 const CorrectParent = () => (
-    <ParentComponent>
-        <ChildComponent />
-    </ParentComponent>
+  <ParentComponent>
+    <ChildComponent />
+  </ParentComponent>
 )
 
 export { CorrectParent }

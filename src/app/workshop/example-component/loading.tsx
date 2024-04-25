@@ -1,5 +1,3 @@
-import React from "react"
-
 const Loading = () => (
   <>
     <h1>Data is being loaded!</h1>

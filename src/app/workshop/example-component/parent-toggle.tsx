@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 import { CorrectParent } from "../../experiment/correctParent"
 import { ToggleButton } from "./toggle-button"

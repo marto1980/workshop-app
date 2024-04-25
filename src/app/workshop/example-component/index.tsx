@@ -1,7 +1,5 @@
 "use client"
 
-import React from "react"
-
 import { ParentToggle } from "./parent-toggle"
 import { UserToggle } from "./user-toggle"
 

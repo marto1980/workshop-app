@@ -10,7 +10,7 @@ module.exports = {
   setupFiles: ["./jest.polyfills.js"],
   globals: {
     "ts-jest": {
-      tsConfig: "tsconfig.test.json",
+      tsconfig: "tsconfig.test.json",
     },
   },
 }

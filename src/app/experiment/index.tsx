@@ -1,11 +1,15 @@
 "use client"
-import { memo, useState } from "react"
 
+import { useState } from "react"
+
+/*
 const ChildComponentWithMemo = memo(() => {
   console.log("I re-rendered")
 
   return <p>Child</p>
 })
+
+*/
 
 const ChildComponent = () => {
   console.log("I re-rendered")
